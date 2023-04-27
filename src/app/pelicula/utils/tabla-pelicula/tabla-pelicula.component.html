@@ -1,0 +1,42 @@
+<!-- <div class="container" *ngIf="peliculas.length > 0; else errorHandler">
+  <div class="row row-cols-1 row-cols-md-3">
+    <div class="card col py-3" style="width: 18rem; margin:10px" *ngFor="let item of peliculas">
+      <img
+        [src]=item.urlImagen
+        class="card-img-top"
+        alt="imagen-entidad"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Nombre: {{ item.nombre }}</h5>
+        <p class="card-text">Tipo: {{ item.tipo }}</p>
+        <a [routerLink]="['/pelicula', item.id]" class="btn btn-primary"
+          >Detalle</a
+        >
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <table class="table table-hover" *ngIf="peliculas.length > 0; else errorHandler">
+    <thead>
+      <tr>
+        <th scope="col" *ngFor="let item of getObjectKeys()">{{item}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of peliculas" (click)="onRowClick(item)">
+        <th scope="row" >{{item.id}}</th>
+        <td>{{item.nombre}}</td>
+        <td>{{item.tipo}}</td>
+        <td>{{item.fechaEstreno.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' })}}</td>
+        <td>{{item.cantidadPublico}}</td>
+        <td><a href={{item.id}}>Link Imagen</a> </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #errorHandler>
+    <div class="container">
+      <p>No hay elementos cargados :(</p>
+    </div>
+  </ng-template>
+</div>

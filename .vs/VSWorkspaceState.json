@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\pelicula",
+    "\\src\\app\\pelicula\\utils",
+    "\\src\\app\\pelicula\\utils\\grilla-pelicula",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\pelicula\\utils\\grilla-pelicula\\grilla-pelicula.component.ts",
+  "PreviewInSolutionExplorer": false
+}

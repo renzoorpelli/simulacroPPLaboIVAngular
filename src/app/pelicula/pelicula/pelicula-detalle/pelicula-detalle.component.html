@@ -1,0 +1,41 @@
+<div *ngIf="parentEntidad != null; else noCargada">
+  <div class="">
+    <div class="mb-3">
+      <div class="mb-3">
+        <label for="txtNombre">Nombre: </label>
+      </div>
+      <input type="text" disabled class="form-control" id="txtNombre" [value]="parentEntidad.nombre">
+    </div>
+    <div class="mb-3">
+      <div class="mb-3">
+        <label for="txtTipo">Tipo: </label>
+      </div>
+      <input type="text" disabled class="form-control" id="txtTipo"
+      [value]="parentEntidad.tipo">
+    </div>
+    <div class="mb-3">
+      <div class="mb-3">
+        <label for="txtFechaEstreno">Fecha Estreno:</label>
+      </div>
+      <input type="text" disabled class="form-control" id="txtFechaEstreno" [value]="parentEntidad.fechaEstreno.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' })">
+    </div>
+    <div class="mb-3">
+      <div class="mb-3">
+        <label for="txtCantidadPublico">Cantidad Publico:</label>
+      </div>
+      <input type="text" disabled class="form-control" id="txtCantidadPublico" [value]="parentEntidad.cantidadPublico">
+    </div>
+    <div class="mb-3">
+      <div class="mb-3">
+        <label for="txtUrlImagen">URL Imagen:</label>
+      </div>
+      <input type="text" disabled class="form-control" id="txtUrlImagen"
+      [value]="parentEntidad.urlImagen">
+    </div>
+  </div>
+</div>
+<ng-template #noCargada>
+  <p class="lead">** Por favor seleccione un item de la lista **</p>
+</ng-template>
+
+
