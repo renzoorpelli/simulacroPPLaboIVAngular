@@ -1,0 +1,4 @@
+.list-container {
+  height: 305px; /* altura fija del contenedor */
+  overflow-y: scroll; /* habilita el scroll vertical */
+}

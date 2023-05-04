@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "simulacroparcial-b85e9": {
+      "hosting": {
+        "parcialPeliculas": [
+          "simulacroparcial-b85e9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "simulacroparcial-b85e9"
+  }
+}

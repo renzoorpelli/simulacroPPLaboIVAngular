@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header">
+    <h1 class="display-6">Seleccionar pais:</h1>
+  </div>
+  <div class="card-body list-container">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Paises:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- async pipe maneja el lifeCycle de la subscripcion -->
+        <tr *ngFor="let item of paises$ | async" (click)="onRowClick(item)">
+          <td>
+            <div class="d-flex align-items-center">
+              <img [src]="item.urlImagen" class="me-3" alt="Product image" width="60">
+              <div>
+                <h6 class="m-0">{{ item.nombre }}</h6>
+                <small class="text-muted">habitantes: {{ item.habitantes }}</small>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

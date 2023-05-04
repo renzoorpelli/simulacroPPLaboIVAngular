@@ -1,0 +1,32 @@
+<div class="container">
+  <div>
+    <h1 class="display-6">Listado Actores</h1>
+    <hr>
+  </div>
+  <div class="container d-flex justify-content-center align-items-center">
+    <table class="table table-hover" *ngIf="listadoActores.length > 0; else errorHandler">
+      <thead>
+        <tr>
+          <th scope="col">Identificador</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Identificador Pais</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listadoActores">
+          <th scope="row" >{{item.idActor}}</th>
+          <td>{{item.nombre}}</td>
+          <td>{{item.edad}}</td>
+          <td>{{item.idPais}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #errorHandler>
+      <div class="container">
+        <p>No hay elementos cargados :(</p>
+      </div>
+    </ng-template>
+  </div>
+  </div>
+
